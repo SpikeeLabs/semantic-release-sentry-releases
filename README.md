@@ -4,7 +4,7 @@
 ![Node.js CI](https://github.com/spikeelabs/semantic-release-sentry-releases/workflows/Node.js%20CI/badge.svg)
 [![downloads](https://img.shields.io/npm/dt/semantic-release-sentry-releases.svg)](https://www.npmjs.com/package/semantic-release-sentry-releases)
 ![Libraries.io dependency status for latest release](https://img.shields.io/librariesio/release/npm/semantic-release-sentry-releases)
-[![Coverage Status](https://coveralls.io/repos/github/spikeelabs/semantic-release-sentry-releases/badge.svg?branch=master)](https://coveralls.io/github/spikeelabs/semantic-release-sentry-releases?branch=master)
+[![codecov](https://codecov.io/gh/SpikeeLabs/semantic-release-sentry-releases/branch/master/graph/badge.svg?token=9EMN64FGBX)](https://codecov.io/gh/SpikeeLabs/semantic-release-sentry-releases)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
 > [semantic-release](https://github.com/semantic-release/semantic-release) plugin to create releases in [sentry](https://docs.sentry.io/workflow/releases/?platform=browsernpm#create-release)
