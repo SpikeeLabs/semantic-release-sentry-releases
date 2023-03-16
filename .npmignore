@@ -1,0 +1,16 @@
+.github
+.husky
+.vscode
+coverage
+node_modules
+test
+.commitlintrc.json
+.editorconfig
+.eslintignore
+.eslintrc.json
+.lintstagedrc.json
+.nvmrc
+.nycrc.json
+.prettierrc
+.releaserc.json
+.renovaterc.json
