@@ -56,8 +56,13 @@ jobs:
         run: |
           npm test
           npx nyc check-coverage
-          npx nyc report > lcov.info
+          npx nyc report --reporter=lcov
         env:
           CI: true
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v3
+        with:
+          verbose: true
+          files: coverage/lcov.info
+          name: codecov-umbrella
+          fail_ci_if_error: true
