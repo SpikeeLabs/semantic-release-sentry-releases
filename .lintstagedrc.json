@@ -1,7 +1,6 @@
 {
   "{src,test}/**/*.js": ["eslint --fix", "prettier --write"],
   "src/**/*.ts": ["prettier --write"],
-  "*.{json,md}": ["prettier --write"],
   ".prettierrc": ["prettier --write"],
   ".{github,vscode}/**/*": ["prettier --write"]
 }
