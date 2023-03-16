@@ -1,41 +1,10 @@
-name: Node.js CI
+name: Semver to tag new version and publish package
 
 on:
-  pull_request:
+  push:
+    branches: [master, alpha, beta]
 
 jobs:
-  test:
-    if: github.ref != 'refs/heads/master'
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node: ['14.21.3', '16.19.1', '17.4.0', '18.15']
-    name: Node ${{ matrix.node }} testing
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-        with:
-          node-version: ${{ matrix.node }}
-      - uses: actions/cache@v2
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
-            ${{ runner.os }}-build-
-            ${{ runner.os }}-
-      - run: npm ci
-      - name: eslint
-        run: npm run lint:check
-      - name: eslint
-        run: npm run format:check
-      - name: ts-compile-check
-        run: npm run ts-compile-check
-      - name: test
-        run: npm test
-        env:
-          CI: true
-
   coverage:
     runs-on: ubuntu-latest
     steps:
@@ -58,3 +27,25 @@ jobs:
           CI: true
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v3
+
+  release:
+    needs: coverage
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '18.15.0'
+      - uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+      - run: npm ci
+      - run: npx semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
