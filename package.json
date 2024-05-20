@@ -47,7 +47,7 @@
     "@semantic-release/github": "8.1.0",
     "@semantic-release/npm": "9.0.2",
     "@semantic-release/release-notes-generator": "10.0.3",
-    "@sentry/types": "6.19.7",
+    "@sentry/types": "8.2.1",
     "@types/chai": "4.3.16",
     "@types/mocha": "9.1.1",
     "@types/mock-require": "2.0.3",
