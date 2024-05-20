@@ -1,6 +1,9 @@
 {
   "extends": ["config:js-lib", ":semanticCommits"],
   "assignees": ["ryshu"],
+  "baseBranches": [
+    "alpha"
+  ],
   "packageRules": [
     {
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
