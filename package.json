@@ -73,7 +73,7 @@
     "nock": "13.5.4",
     "nyc-config-common": "1.0.1",
     "nyc": "15.1.0",
-    "pinst": "2.1.6",
+    "pinst": "3.0.0",
     "prettier": "2.8.8",
     "semantic-release": "22.0.12",
     "temp-write": "4.0.0",
