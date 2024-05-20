@@ -2,7 +2,7 @@ name: Semver to tag new version and publish package
 
 on:
   push:
-    branches: [master, alpha, beta]
+    branches: [master]
 
 jobs:
   coverage:
