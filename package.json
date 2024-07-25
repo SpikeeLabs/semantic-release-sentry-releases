@@ -53,7 +53,7 @@
     "@types/mock-require": "2.0.3",
     "@types/node": "16.18.104",
     "@types/semantic-release": "20.0.6",
-    "chai": "4.4.1",
+    "chai": "4.5.0",
     "eslint-config-standard": "17.1.0",
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-array-func": "5.0.1",
