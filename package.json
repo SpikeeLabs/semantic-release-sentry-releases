@@ -51,7 +51,7 @@
     "@types/chai": "4.3.17",
     "@types/mocha": "10.0.7",
     "@types/mock-require": "2.0.3",
-    "@types/node": "16.18.104",
+    "@types/node": "16.18.105",
     "@types/semantic-release": "20.0.6",
     "chai": "4.5.0",
     "eslint-config-standard": "17.1.0",
