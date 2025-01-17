@@ -67,7 +67,7 @@
     "eslint-plugin-sonarjs": "1.0.4",
     "eslint": "8.57.1",
     "husky": "9.1.7",
-    "lint-staged": "15.4.0",
+    "lint-staged": "15.4.1",
     "mocha": "10.8.2",
     "mock-require": "3.0.3",
     "nock": "13.5.6",
