@@ -48,7 +48,7 @@
     "@semantic-release/npm": "9.0.2",
     "@semantic-release/release-notes-generator": "10.0.3",
     "@sentry/types": "8.55.2",
-    "@types/chai": "4.3.20",
+    "@types/chai": "5.2.3",
     "@types/mocha": "10.0.10",
     "@types/mock-require": "2.0.3",
     "@types/node": "16.18.126",
